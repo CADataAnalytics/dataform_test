@@ -1,6 +1,6 @@
 function create_model(model_name, model_from, model_type, options) {
   return `
-    CREATE MODEL \`${model_name}\`
+    CREATE OR REPLACE MODEL \`${model_name}\`
     OPTIONS(
         MODEL_TYPE = '${model_type}',
         ${options.map((field) => `${field.name} = ${field.value}`).join(",\n\t\t")}
