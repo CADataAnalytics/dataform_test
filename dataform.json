@@ -3,6 +3,6 @@
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "contaazul-datalake-lab",
-  "defaultLocation": "US"
+  "defaultLocation": "us-east4"
 }
     

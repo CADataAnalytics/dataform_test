@@ -1,0 +1,16 @@
+config { 
+  type: "incremental",
+  schema: "raw_event",
+  tags: "transact"
+}
+
+SELECT 
+  publish_time,
+  PARSE_JSON(msg) as json_data
+FROM ${ref("transaction")}, 
+UNNEST(json_extract_array(data, '$.Record')) as msg 
+
+${ when(incremental(), `
+  WHERE DATE(publish_time) = current_date()-10 AND 
+  publish_time > COALESCE((SELECT MAX(publish_time) 
+  FROM ${self()}), '1995-12-31')`) }
