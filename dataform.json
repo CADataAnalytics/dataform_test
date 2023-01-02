@@ -1,5 +1,5 @@
 {
-  "defaultSchema": "dataform",
+  "defaultSchema": "raw_event",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "contaazul-datalake-lab",
