@@ -1,8 +1,8 @@
 {
-  "defaultSchema": "raw_event",
+  "defaultSchema": "self_product",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "contaazul-datalake-lab",
-  "defaultLocation": "us-east4"
+  "defaultLocation": "US"
 }
     
